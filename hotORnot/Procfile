@@ -1,1 +1,1 @@
-web: waitress-serve —port=$PORT hotORnot.wsgi:application
+web: gunicorn hotORnot.wsgi —log-file -
