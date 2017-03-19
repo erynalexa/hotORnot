@@ -35,6 +35,7 @@ dask==0.13.0
 datashape==0.5.4
 decorator==4.0.11
 dill==0.2.5
+dj-database-url==0.4.2
 Django==1.10.6
 docutils==0.13.1
 enum34==1.1.6
@@ -48,7 +49,7 @@ futures==3.0.5
 gevent==1.2.1
 greenlet==0.4.11
 grin==1.2.1
-gunicorn==19.0.0
+gunicorn==19.7.0
 h5py==2.6.0
 HeapDict==1.0.0
 idna==2.2
@@ -88,6 +89,7 @@ numexpr==2.6.1
 numpy==1.11.3
 numpydoc==0.6.0
 odo==0.5.0
+olefile==0.44
 openpyxl==2.4.1
 pandas==0.19.2
 partd==0.3.7
@@ -149,6 +151,7 @@ traitlets==4.3.1
 unicodecsv==0.14.1
 wcwidth==0.1.7
 Werkzeug==0.11.15
+whitenoise==2.0.6
 widgetsnbextension==1.2.6
 wrapt==1.10.8
 xlrd==1.0.0

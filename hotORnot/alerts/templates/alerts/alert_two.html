@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+  <title>HOTorNOT</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="{% static 'alerts/style/reset.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'alerts/style/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="players_warning">
+    <div class="two-thirds left">
+      <p>1 Player(s) in Danger</p>
+    </div>
+    <div class="one-third right expand">
+      <p>+ See Details</p>
+    </div>
+  </div>
+  <div class="main">
+      <div class="tip">
+        <p class="pspace">PLAYER WARNING</p>
+        <p>A. Adams is possibly experiencing heat exhaustion. Is he experiencing any of the following symptoms? <b>disorientation, nausea, headache.</b></p>
+        <div class="act">
+        <div class="half left a-left">
+          <a href="#">NO</p>
+        </div>
+        <div class="half left a-right">
+          <a href="next.html">YES SYMPTOMS</p>
+        </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
