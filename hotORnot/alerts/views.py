@@ -1,22 +1,28 @@
 
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
-from django.views import generic
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 # Create your views here.
 
+@xframe_options_exempt
 def inner(request):
     return render(request, 'alerts/inner_2.html')
 
+@xframe_options_exempt
 def alert_two(request):
     return render(request, 'alerts/alert_two.html')
 
+@xframe_options_exempt
 def next(request):
     return render(request, 'alerts/next.html')
 
+@xframe_options_exempt
 def over(request):
     return render(request, 'alerts/over.html')
+
 #def index(request):
     #template = loader.get_template('login/alert_two_next.html')
 #return render(request, 'alerts/alert_two_next.html')
