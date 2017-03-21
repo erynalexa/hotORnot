@@ -14,10 +14,7 @@ from django.utils.encoding import python_2_unicode_compatible
 class HeatExhaustion(models.Model):
     date = models.DateTimeField(primary_key=True)
     indicator = models.IntegerField()
-    #HeatExhaustion.objects
-    #obj = Entry.objects.filter(date_isnull=False).latest('date')
-    #i = HeatExhaustion(indicator='1', date = obj)
-    #i.objects
+ 
     def __str__(self):
         return "%i" % (self.indicator)
     
