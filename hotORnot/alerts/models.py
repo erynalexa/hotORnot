@@ -17,7 +17,7 @@ class HeatExhaustion(models.Model):
     
     class Meta:
         managed = False
-        db_table = 'heat_exhaustion'
+        db_table = 'HeatExhaustion'
  
     def __str__(self):
         return "%i" % (self.indicator)
