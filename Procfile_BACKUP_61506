@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-web: gunicorn hotORnot.wsgi --log-file -
-=======
-web: gunicorn --pythonpath hotORnot hotORnot.wsgi --log-file -
->>>>>>> 9a3dd53dfd2e5b57a1d6e60e8a48740b5aabf847
