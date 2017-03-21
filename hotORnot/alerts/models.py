@@ -14,12 +14,13 @@ from django.utils.encoding import python_2_unicode_compatible
 class HeatExhaustion(models.Model):
     date = models.DateTimeField(primary_key=True)
     indicator = models.IntegerField()
- 
-    def __str__(self):
-        return "%i" % (self.indicator)
     
     class Meta:
         managed = False
         db_table = 'heat_exhaustion'
+ 
+    def __str__(self):
+        return "%i" % (self.indicator)
+
 
 
