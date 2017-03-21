@@ -3,13 +3,16 @@ from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
+from .models import HeatExhaustion
 from django.views.decorators.clickjacking import xframe_options_exempt
 
 # Create your views here.
 
 @xframe_options_exempt
 def inner(request):
-    return render(request, 'alerts/inner_2.html')
+    latest_in = HeatExhaustion.objects.latest('date')
+    context = {'latest_in': latest_in}
+    return render(request, 'alerts/inner_2.html', context)
 
 @xframe_options_exempt
 def alert_two(request):

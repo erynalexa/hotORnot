@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'hotORnot.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Group5',
+        'NAME': 'fydp',
         'USER': 'eadickison',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
