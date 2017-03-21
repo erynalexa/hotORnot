@@ -1,1 +1,1 @@
-web: gunicorn hotORnot.wsgi --log-file -
+web: gunicorn --pythonpath hotORnot hotORnot.wsgi --log-file -
