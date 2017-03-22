@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'hotORnot.urls'
@@ -79,25 +80,18 @@ WSGI_APPLICATION = 'hotORnot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-in_heroku = False
-if 'DATABASE_URL' in os.environ:
-    in_heroku = True
-
-if in_heroku:
-    # Update database configuration with $DATABASE_URL
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'fydp',
-            'USER': 'eadickison',
-            'PASSWORD': '',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fydp',
+        'USER': 'eadickison',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
+}
+
+DATABASES= {'default': dj_database_url.config() }
 
 
 # Password validation
@@ -144,4 +138,4 @@ STATICFILES_DIRS = (
 )
 
 #Simplified static file serving
-staticfiles_storage = 'whitenoise.django.GziManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
