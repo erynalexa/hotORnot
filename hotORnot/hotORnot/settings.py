@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'hotORnot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES {
-'default': {
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fydp',
         'USER': 'eadickison',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432',
- }
+    }
 }
 
 # Update database configuration with $DATABASE_URL
