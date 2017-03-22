@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import psycopg2
+import urlparse
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,19 +79,20 @@ WSGI_APPLICATION = 'hotORnot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fydp',
-        'USER': 'eadickison',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
+DATABASES ['default'] = dj_database_url.config(default='postgres://user:pass@localhos/fydp')
+#'default': {
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'fydp',
+        #'USER': 'eadickison',
+        #'PASSWORD': '',
+        #'HOST': '127.0.0.1',
+        #'PORT': '5432',
+# }
+#}
+
+DATABASE_URL= postgres://xuwdmjtqqzhxys:126fb3ff1544ebf9794e74e2aaa3e015feb4ee0230f8b57fbc81de903d75e9f6@ec2-107-22-223-6.compute-1.amazonaws.com:5432/d411tqosl3d2oe
 
 # Update database configuration with $DATABASE_URL
-import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
