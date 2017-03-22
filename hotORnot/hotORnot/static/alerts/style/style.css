@@ -120,6 +120,15 @@ footer {
 
 
 /* tip */
+
+#alert {
+  display: block;
+}
+
+#no_alert {
+  display: none;
+}
+
 .tip {
   border-top: 5px solid #FFC970;
   background: #f2f2f2;

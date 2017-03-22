@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import HeatExhaustion
+from .models import HeatExhaustion
 
 # Register your models here.
 
